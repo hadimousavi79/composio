@@ -4,7 +4,7 @@ import { TSchemaProcessor } from "../types/base_toolset";
 import { ComposioToolSet } from "./base.toolset";
 import { ActionExecutionResDto } from "./client";
 
-describe("ComposioToolSet class tests", () => {
+describe("ComposioToolSet class", () => {
   let toolset: ComposioToolSet;
   const testConfig = getTestConfig();
 
