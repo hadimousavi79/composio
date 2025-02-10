@@ -47,7 +47,7 @@ const toolset = new VercelAIToolSet({
   apiKey: process.env.COMPOSIO_API_KEY,
 });
 
-const appName = "serpapi";
+const appName = "tavily";
 
 async function setupUserConnectionIfNotExists(entityId) {
   const spinner = displayLoadingAnimation('Checking connection status...');
@@ -87,7 +87,7 @@ async function executeAgent(entityName) {
 
   // Retrieve tools for the specified app
   const tools = await toolset.getTools({ 
-    apps: ["serpapi", "tavily"] 
+    apps: ["tavily"] 
   }, entity.id);
   
   spinner.succeed(chalk.green('Tools retrieved successfully!'));
