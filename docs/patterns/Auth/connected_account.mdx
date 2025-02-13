@@ -7,8 +7,9 @@ description: "Learn how to securely manage and authenticate multiple user connec
 ### Entities
 
 - Each **user** is represented by a **unique entity ID**.
-- If you have two users, **default** and **Melissa**, they will each have **unique entity IDs**.
+- If you have two users, **Jessica** and **Melissa**, they will each have **unique entity IDs**.
 - You can use an entity object to manage connected accounts and perform actions on behalf of a user, learn more [here](/patterns/tools/use-tools/action-guide-without-agents#how-can-i-use-tools-for-a-specific-user). Here's how to retrieve an entity object:
+- Labels can be assigned to manage and organize multiple connections for the same user (e.g., when a user connects multiple accounts of the same service), learn more about [using labels](/patterns/Auth/using-labels).
 
 <CodeGroup>
 ```python Python
@@ -73,7 +74,7 @@ const toolset = new ComposioToolSet();
 Below are the accepted parameters for initiating a new connection:
 - `integration_id`: ID of the existing integration, use this to create a connection for an existing integration, If no integration exists for the given app, new one is automatically created
 - `app`: name of the app to create a connection for
-- `labels`: labels to be assigned to the connection, which can later be used to filter connections
+- `labels`: labels to be assigned to the connection, which can be used to differentiate between multiple connections for the same entity
 - `entity_id`: ID of the user for whom the connection is being created
 - `redirect_url`: URL to redirect the user to after the connection is created (for OAuth auth scheme). If not provided, the user will be redirected to Composio's connection success/failer page
 - `connected_account_params`/`data`: If auth mode is non-OAuth, this is where parameters need to be passed for creating a connection (API key, shopify store name, etc)
@@ -85,9 +86,14 @@ Let's create a connection for the user **default** for the Gmail app.
 ```python Python
 # Store connection parameters
 redirect_url = "https://yourwebsite.com/connection/success"
-entity_id = "default" 
+entity_id = "default"
 
-connection_request = toolset.initiate_connection(redirect_url=redirect_url, entity_id=entity_id, app=App.GMAIL)
+connection_request = toolset.initiate_connection(
+    redirect_url=redirect_url, 
+    entity_id=entity_id, 
+    app=App.GMAIL,
+    #labels=["primary", "<label-name>"] #labels can be assigned to differentiate between multiple connections for the same entity
+)
 ```
 ```javascript JavaScript
 // Store connection parameters
@@ -99,6 +105,7 @@ const connectionRequest = await toolset.connectedAccounts.initiate({
   redirectUri: redirectURL,
   entityId: entityId,
   authMode: "OAUTH2",
+  //labels: ["primary", "<label-name>"] //labels can be assigned to differentiate between multiple connections for the same entity
 });
 console.log(connectionRequest);
 ```
@@ -202,7 +209,7 @@ To create a new connection for FireCrawl app, we need the FireCrawl API key
 Below are the accepted parameters for initiating a new connection:
 - `integration_id`: ID of the existing integration, use this to create a connection for an existing integration, If no integration exists for the given app, new one is automatically created
 - `app`: name of the app to create a connection for
-- `labels`: labels to be assigned to the connection, which can later be used to filter connections
+- `labels`: labels to be assigned to the connection, which can be used to differentiate between multiple connections for the same entity
 - `entity_id`: ID of the user for whom the connection is being created
 - `redirect_url`: URL to redirect the user to after the connection is created (for OAuth auth scheme). If not provided, the user will be redirected to Composio's connection success/failer page
 - `connected_account_params`/`data`: If auth mode is non-OAuth, this is where parameters need to be passed for creating a connection (API key, shopify store name, etc)
@@ -223,6 +230,7 @@ connection_request = toolset.initiate_connection(
     entity_id=entity_id,
     app=App.FIRECRAWL,
     auth_scheme=auth_scheme,
+    #labels=["primary", "<label-name>"] #labels can be assigned to differentiate between multiple connections for the same entity
 )
 ```
 ```javascript JavaScript
@@ -238,7 +246,8 @@ const connection_request = await toolset.connectedAccounts.initiate({
     entityId: entityId,
     appName: "firecrawl",
     authMode: authScheme,
-    authConfig: {}
+    authConfig: {},
+    //labels: ["primary", "<label-name>"] //labels can be assigned to differentiate between multiple connections for the same entity
 })
 console.log(connection_request)
 ```
