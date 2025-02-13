@@ -149,14 +149,14 @@
           "pages": [
             "framework/smolagents",
             "framework/camelai",
-            "javascript/cloudflare",
+            "framework/cloudflare",
             "framework/griptape",
             "framework/groq",
             "framework/julep",
             "framework/lyzr",
             "framework/agno",
             "framework/praisonai",
-            "javascript/vercel",
+            "framework/vercel",
             "framework/google",
             "framework/ibm"
           ]
