@@ -11,7 +11,11 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Get Started",
+        "tab":"Welcome",
+        "href": "https://composio.dev"
+      },
+      {
+        "tab": "Guide",
         "groups": [
           {
             "group": "Get Started",
@@ -143,8 +147,7 @@
               "faq/api_key/cli",
               "faq/integrations_and_connections/list_of_tools",
               "faq/supported_llms/supported_llm",
-              "monitoring-docs",
-              "changelog"
+              "monitoring-docs"
             ]
           }
         ]
@@ -289,6 +292,10 @@
         ]
       },
       {
+        "tab": "SDK Reference (JS)",
+        "href": "https://composio-zeta.vercel.app"
+      },
+      {
         "tab": "All Tools",
         "href": "https://app.composio.dev/apps"
       },
@@ -296,7 +303,31 @@
         "tab": "Chat with Code",
         "href": "https://entelligence.ai/ComposioHQ&composio"
       }
-    ]
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Dashboard",
+          "href": "https://app.composio.dev/",
+          "icon": "table-columns"
+        },
+        {
+          "anchor": "Discord",
+          "href": "https://discord.com/channels/1170785031560646836",
+          "icon": "discord"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://composio.dev/blog",
+          "icon": "newspaper"
+        },
+        {
+          "anchor": "Changelog",
+          "href": "https://github.com/ComposioHQ/composio/releases",
+          "icon": "code-commit"
+        }
+      ]
+    }
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -414,10 +445,6 @@
     {
       "source": "/introduction/foundations/components/local_tools",
       "destination": "/introduction/foundations/components/custom_actions"
-    },
-    {
-      "source": "/changelog",
-      "destination": "https://github.com/ComposioHQ/composio/releases"
     }
   ]
 }
