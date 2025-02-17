@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "palm",
+  "theme": "mint",
   "name": "Composio",
   "colors": {
     "primary": "#343434",
@@ -14,12 +14,12 @@
         "tab": "Get Started",
         "groups": [
           {
-            "group": "Introduction",
+            "group": "Get Started",
             "pages": [
-              "introduction/intro/overview",
-              "introduction/intro/basic",
-              "introduction/intro/quickstart-tools",
-              "introduction/intro/quickstart-triggers"
+              "get-started/overview",
+              "get-started/basic",
+              "get-started/tools",
+              "get-started/triggers"
             ]
           },
           {
