@@ -74,12 +74,12 @@
               "framework/langgraph",
               "framework/llamaindex",
               "framework/autogen",
-              "framework/langflow",
               "framework/vercel",
-              "framework/openai",
               {
                 "group": "Other Frameworks",
                 "pages": [
+                  "framework/openai",
+                  "framework/langflow",
                   "framework/crewai",
                   "framework/gemini",
                   "framework/agno",
