@@ -70,31 +70,31 @@
           {
             "group": "Supported Frameworks",
             "pages": [
-              "framework/autogen",
-              "framework/crewai",
-              "framework/gemini",
               "framework/langchain",
-              "framework/langflow",
               "framework/langgraph",
-              "framework/letta",
-              "framework/litellm",
               "framework/llamaindex",
               "framework/openai",
+              "framework/autogen",
+              "framework/agno",
+              "framework/crewai",
+              "framework/gemini",
+              "framework/langflow",
+              "framework/vercel",
               {
                 "group": "Other Frameworks",
                 "pages": [
+                  "framework/letta",
+                  "framework/litellm",
                   "framework/smolagents",
-                  "framework/camelai",
                   "framework/cloudflare",
-                  "framework/griptape",
                   "framework/groq",
-                  "framework/julep",
                   "framework/lyzr",
-                  "framework/agno",
-                  "framework/praisonai",
-                  "framework/vercel",
                   "framework/google",
-                  "framework/ibm"
+                  "framework/ibm",
+                  "framework/julep",
+                  "framework/praisonai",
+                  "framework/griptape",
+                  "framework/camelai"
                 ]
               }
             ]
