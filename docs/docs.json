@@ -11,10 +11,6 @@
   "navigation": {
     "tabs": [
       {
-        "tab":"Welcome",
-        "href": "https://composio.dev"
-      },
-      {
         "tab": "Guide",
         "groups": [
           {
@@ -22,6 +18,7 @@
             "pages": [
               "get-started/overview",
               "get-started/basic",
+              "get-started/installation",
               "get-started/tools",
               "get-started/triggers"
             ]
@@ -141,13 +138,9 @@
           {
             "group": "Others",
             "pages": [
-              "introduction/foundations/components/workspace",
               "integrations/google",
               "faq/api_key/api_key",
-              "faq/api_key/cli",
-              "faq/integrations_and_connections/list_of_tools",
-              "faq/supported_llms/supported_llm",
-              "monitoring-docs"
+              "faq/api_key/cli"
             ]
           }
         ]
@@ -303,31 +296,7 @@
         "tab": "Chat with Code",
         "href": "https://entelligence.ai/ComposioHQ&composio"
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Dashboard",
-          "href": "https://app.composio.dev/",
-          "icon": "table-columns"
-        },
-        {
-          "anchor": "Discord",
-          "href": "https://discord.com/channels/1170785031560646836",
-          "icon": "discord"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://composio.dev/blog",
-          "icon": "newspaper"
-        },
-        {
-          "anchor": "Changelog",
-          "href": "https://github.com/ComposioHQ/composio/releases",
-          "icon": "code-commit"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",

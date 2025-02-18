@@ -1,4 +1,72 @@
-:is(.dark .dark\:text-primary-light) {
+/* /* :is(.dark .dark\:text-primary-light) {
     --tw-text-opacity: 1;
-    color: rgb(255 255 255);
+    color: white;
+} */
+/* 
+:is(.light .light\:text-primary-light) {
+    --tw-text-opacity: 1;
+    color: black;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+    .hero {
+        color: white;
+    }
+}
+@media (prefers-color-scheme: light) {
+    .hero {
+        color: black;
+    }
+} */
+
+
+
+.container {
+    padding: 0 8rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    color: light-dark(#333b3c, #efefec)
+}
+
+.hero h1 {
+    font-size: 3.75rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+.welcome-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+.search-container {
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+.docs-link {
+    text-align: center;
+    margin: 1rem 0 4rem 0;
+}
+
+.welcome-footer {
+    height: 10rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 6rem;
+    }
 }

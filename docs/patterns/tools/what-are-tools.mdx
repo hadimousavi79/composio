@@ -1,5 +1,5 @@
 ---
-title: "🛠️ What are Tools & Actions?"
+title: "What are Tools & Actions?"
 sidebarTitle: "What are Tools?"
 description: "Learn about tools in Composio"
 ---
@@ -62,23 +62,14 @@ See all supported frameworks [here](../../framework/autogen).
 - `**kwargs`: Additional arguments for advanced use cases
 
 #### Getting Tools & Actions
-<Steps>
-<Step title="Install packages">
-```bash Python
-pip install composio-langchain
-```
-</Step>
-<Step title="Get tools">
 ```python Python 
-from composio_langchain import ComposioToolSet, Action, App
+from composio-langchain import ComposioToolSet, Action, App
 
 tool_set = ComposioToolSet()
 
 # Get all actions from a tool
 tools = tool_set.get_tools(apps=[App.GITHUB])
 ```
-</Step>
-</Steps>
 </Tab>
 <Tab title="JavaScript">
 Tools and Actions are available through different toolset classes:
@@ -95,13 +86,6 @@ Tools and Actions are available through different toolset classes:
 #### Advanced Use Case:
 - `baseUrl`: Base URL for the Composio API server
 
-<Steps>
-<Step title="Install packages">
-```bash JavaScript
-npm install composio-core
-```
-</Step>
-<Step title="Get tools">
 ```javascript JavaScript
 import { LangchainToolSet } from "composio-core";
 
@@ -110,8 +94,6 @@ const composioToolset = new LangchainToolSet();
 // Get all actions from a tool
 const tools = await composioToolset.getTools({ apps: ["GITHUB"] });
 ```
-</Step>
-</Steps>
 </Tab>
 </Tabs>
 

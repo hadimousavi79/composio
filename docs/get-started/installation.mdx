@@ -1,0 +1,75 @@
+---
+title: "Installation"
+sidebarTitle: "Installation"
+---
+
+<Tabs>
+<Tab title="Python">
+<Steps>
+<Step title="Install Composio Package">
+Install the official [Composio package](https://pypi.org/project/composio-core), this will also install the Composio CLI
+```python
+pip install composio-core
+```
+</Step>
+<Step title="Login via CLI">
+To use Composio tools, you need to use the API key, by exporting `COMPOSIO_API_KEY=<value>` in your terminal, storing it in .env, or just login via CLI
+```bash 
+composio login
+```
+After executing this, you will automatically be redirected to Composio dashboard, from where you can get the authentication code
+</Step>
+</Steps>
+</Tab>
+<Tab title="JavaScript">
+<Steps>
+<Step title="Install Composio Package">
+Install the official [Composio package](https://www.npmjs.com/package/composio-core), this will also install the Composio CLI
+```javascript
+npm install composio-core
+```
+</Step>
+<Step title="Login via CLI">
+To use Composio tools, you need to use the API key, by exporting `COMPOSIO_API_KEY=<value>` in your terminal, storing it in .env, or just login via CLI
+```bash 
+composio login
+```
+After executing this, you will automatically be redirected to Composio dashboard, from where you can get the authentication code
+</Step>
+</Steps>
+</Tab>
+</Tabs>
+
+
+<hr />
+
+## Quick Access
+
+Get started with these resources:
+
+<CardGroup cols={2}>
+<Card
+  title="Watch Demo"
+  href="https://www.youtube.com/watch?v=ujxKzS0b5qg"
+>
+  See Composio in action
+</Card>
+<Card
+  title="Quickstart"
+  href="/introduction/intro/quickstart-tools"
+>
+  Build your first Composio powered AI agent
+</Card>
+<Card title="Tools" href="../../patterns/tools/what-are-tools">
+Checkout our toolset of 250+ LLM ready tools to build powerful AI applications
+</Card>
+<Card title="Connections" href="../../patterns/Auth/connected_account">
+Learn how to create and manage connections for your users
+</Card>
+<Card title="Kits" href="../../swekit/introduction">
+Composio SWE Kit ([#4 on SWE bench](https://www.swebench.com)) - Your ultimate coding companion
+</Card>
+<Card title="Triggers" href="/patterns/triggers/triggers">
+Subscribe to triggers to execute actions automatically
+</Card>
+</CardGroup>
